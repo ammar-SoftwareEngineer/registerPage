@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <Router
-        basename={"https://ammar-softwareengineer.github.io/registerPage/"}
+   
       >
         <Routes>
           <Route path="/login" Component={Login} />
