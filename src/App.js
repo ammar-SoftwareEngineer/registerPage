@@ -3,18 +3,18 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import Login from "./Component/Login/Login";
 import Register from "./Component/Register/Register";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 function App() {
   return (
-    <Router basename="/registerPage">
+    <div className="App">
       <Routes>
         <Route path="/login" Component={Login} />
-        <Route path="/" Component={Login} />
+        <Route path="/"  Component={Login} />
         <Route path="/register" Component={Register} />
+        
       </Routes>
-    </Router>
+    </div>
   );
 }
-
 
 export default App;
