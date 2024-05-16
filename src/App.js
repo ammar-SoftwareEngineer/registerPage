@@ -7,12 +7,13 @@ import { Routes, Route } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      <Routes>
-        <Route path="/login" Component={Login} />
-        <Route path="/"  Component={Login} />
-        <Route path="/register" Component={Register} />
-        
-      </Routes>
+        <Routes>
+ 
+          <Route path="/login" exact Component={Login} />
+          <Route path="/" exact Component={Login} />
+          <Route path="/register" exact Component={Register} />
+     
+        </Routes>
     </div>
   );
 }

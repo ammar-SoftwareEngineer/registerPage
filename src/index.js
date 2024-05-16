@@ -8,6 +8,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter basename="/registerPage">
+      
       <App />
     </BrowserRouter>
   </React.StrictMode>
