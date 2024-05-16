@@ -6,7 +6,6 @@ import { loginAndRegister } from "../Context/FormInput";
 import {
   faEnvelope,
   faLock,
-  faXmarkCircle,
   faCheckCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import Modal from "../Modal/Modal";
