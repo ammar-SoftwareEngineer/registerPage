@@ -64,7 +64,7 @@ export default function Login() {
                 let data = JSON.parse(localStorage.getItem("register"));
                 if (data === null) {
                   setShowModal(true);
-                  setMsg("The account and password do not exist ");
+                  setMsg("The account and password do unavailable ");
                   setBodyMsg("  register a new account");
                 } else if (
                   data.email === loginInputs.email &&
