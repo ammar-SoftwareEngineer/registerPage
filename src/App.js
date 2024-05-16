@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import Login from "./Component/Login/Login";
 import Register from "./Component/Register/Register";
-import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <Router basename="/registerPage">
@@ -11,10 +11,10 @@ function App() {
         <Route path="/login" Component={Login} />
         <Route path="/" Component={Login} />
         <Route path="/register" Component={Register} />
-        
       </Routes>
-      </Router>
+    </Router>
   );
 }
+
 
 export default App;
