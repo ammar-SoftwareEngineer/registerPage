@@ -20,12 +20,12 @@ export default function Modal() {
               <FontAwesomeIcon
                 icon={msgContext.iconName}
                 size="3x"
-                className={msgContext.msg ? "text-success" : "text-danger"}
+                className={msgContext.msg==="Success" ? "text-success" : "text-danger"}
               />
               <div className="card-body">
                 <h5
                   className={
-                    msgContext.msg ? "text-success fs-4 " : "text-danger fs-4"
+                    msgContext.msg==="Success" ? "text-success fs-4 " : "text-danger fs-4"
                   }
                 >
                   {msgContext.msg}
@@ -33,7 +33,7 @@ export default function Modal() {
                 <p className="card-text ">{msgContext.bodyMsg}</p>
                 <button
                   className={
-                    msgContext.msg ? " btn btn-success " : " btn btn-danger "
+                    msgContext.msg==="Success" ? " btn btn-success " : " btn btn-danger "
                   }
                 >
                   Close

@@ -6,7 +6,6 @@ import {
   faUser,
   faLock,
   faXmarkCircle,
-  faCheckCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { loginAndRegister } from "../Context/FormInput";
 import { Link, useNavigate } from "react-router-dom";
@@ -17,6 +16,7 @@ import { Msg } from "../Context/MsgContext";
 
 export default function Register() {
   let [showModal, setShowModal] = useState(false);
+  let [bodyMsg, setBodyMsg] = useState("");
   let [registerInputs, setRegisterInputs] = useState({
     email: "",
     userName: "",
@@ -109,6 +109,9 @@ export default function Register() {
                   navigate("/login");
                 } else {
                   setError("Confirm Password Error");
+                  setBodyMsg(
+                    "The password you wrote in the Confirm Password field is incorrect. Check if it is similar to the Password field"
+                  );
                 }
               }}
             >
@@ -193,8 +196,7 @@ export default function Register() {
               value={{
                 show: showModal,
                 msg: error,
-                bodyMsg:
-                  "The password you wrote in the Confirm Password field is incorrect. Check if it is similar to the Password field",
+                bodyMsg: bodyMsg,
                 iconName: faXmarkCircle,
               }}
             >

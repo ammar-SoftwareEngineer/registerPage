@@ -7,6 +7,7 @@ import {
   faEnvelope,
   faLock,
   faCheckCircle,
+  faXmarkCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import Modal from "../Modal/Modal";
 import img from "../ImageSide/images/icon.png";
@@ -15,6 +16,7 @@ import { Link } from "react-router-dom";
 export default function Login() {
   let [showModal, setShowModal] = useState(false);
   let [msg, setMsg] = useState("");
+  let [bodyMsg, setBodyMsg] = useState("");
   let [loginInputs, setLoginInputs] = useState({
     email: "",
     password: "",
@@ -60,12 +62,19 @@ export default function Login() {
               onSubmit={(e) => {
                 e.preventDefault();
                 let data = JSON.parse(localStorage.getItem("register"));
-                if (data.email === loginInputs.email && data.password === loginInputs.password) {
-                  setShowModal(true)
-                  setMsg("Success")
-
-                }else{
-                  console.log(false);
+                if (
+                  data.email === loginInputs.email &&
+                  data.password === loginInputs.password
+                ) {
+                  setShowModal(true);
+                  setMsg("Success");
+                  setBodyMsg(
+                    "Congratulations, your account has been successfully registered"
+                  );
+                } else {
+                  setShowModal(true);
+                  setMsg("The account and password are incorrect");
+                  setBodyMsg(" Edit the account or register a new account");
                 }
               }}
             >
@@ -136,9 +145,8 @@ export default function Login() {
               value={{
                 show: showModal,
                 msg: msg,
-                bodyMsg:
-                  "Congratulations, your account has been successfully registered",
-                iconName: faCheckCircle,
+                bodyMsg: bodyMsg,
+                iconName: msg === "Success" ? faCheckCircle : faXmarkCircle,
               }}
             >
               <Modal />
