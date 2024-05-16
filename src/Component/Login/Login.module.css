@@ -1,0 +1,8 @@
+.Login {
+}
+
+@media (min-width: 992px) {
+    .container {
+    width: 75% !important;
+  }
+}
