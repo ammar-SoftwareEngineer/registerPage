@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/registerPage/static/css/main.4f209218.css",
+    "main.js": "/registerPage/static/js/main.c0a8e91e.js",
+    "static/js/453.37be056d.chunk.js": "/registerPage/static/js/453.37be056d.chunk.js",
+    "static/media/Rectangle 11.png": "/registerPage/static/media/Rectangle 11.3ff7aaa9aba1fca3cc8d.png",
+    "index.html": "/registerPage/index.html",
+    "main.4f209218.css.map": "/registerPage/static/css/main.4f209218.css.map",
+    "main.c0a8e91e.js.map": "/registerPage/static/js/main.c0a8e91e.js.map",
+    "453.37be056d.chunk.js.map": "/registerPage/static/js/453.37be056d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4f209218.css",
+    "static/js/main.c0a8e91e.js"
+  ]
+}
