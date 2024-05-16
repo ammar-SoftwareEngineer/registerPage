@@ -62,7 +62,11 @@ export default function Login() {
               onSubmit={(e) => {
                 e.preventDefault();
                 let data = JSON.parse(localStorage.getItem("register"));
-                if (
+                if (data === null) {
+                  setShowModal(true);
+                  setMsg("The account and password do not exist ");
+                  setBodyMsg("  register a new account");
+                } else if (
                   data.email === loginInputs.email &&
                   data.password === loginInputs.password
                 ) {
